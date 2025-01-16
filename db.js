@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://psysecboi:0609%40JPkv@cluster0.8gord.mongodb.net/course-app");
 
 const Schema = mongoose.Schema;
 const ObjectId = mongoose.Types.ObjectId;

@@ -1,4 +1,6 @@
 const express = require('express');
+const mongoose = require("mongoose");
+
 const { userRouter } = require('./routes/user');
 const { courseRouter } = require('./routes/course');
 const { adminRouter } = require('./routes/admin');
@@ -9,5 +11,8 @@ app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 app.use("/course", courseRouter);
 
-
-app.listen(3000); 
+async function main(){
+  await mongoose.connect("mongodb+srv://psysecboi:0609%40JPkv@cluster0.8gord.mongodb.net/course-app")
+  app.listen(3000); 
+}
+main();
